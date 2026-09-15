@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connexion admin — DEKAL Books</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="container nav">
+  <a class="brand" href="/">📚 <span>DEKAL Books</span></a><nav><a href="/">Accueil</a></nav>
+</div></header>
+<main class="container auth-wrap">
+  <form id="loginForm" class="panel auth-card">
+    <p class="eyebrow">Administration</p><h1>Connexion</h1>
+    <label>Nom d'utilisateur<input id="username" required autocomplete="username"></label>
+    <label>Mot de passe<input id="password" type="password" required autocomplete="current-password"></label>
+    <button class="btn primary" type="submit">Se connecter</button>
+    <p id="loginMessage" class="form-message"></p>
+  </form>
+</main>
+<script src="/js/login.js"></script>
+</body>
+</html>

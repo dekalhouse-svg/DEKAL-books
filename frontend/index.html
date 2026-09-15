@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DEKAL Books — Bibliothèque numérique de ressources PDF.">
+  <title>DEKAL Books</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/" aria-label="DEKAL Books accueil">
+      <span class="brand-mark">DB</span><span class="brand-name">DEKAL BOOKS</span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <a class="active" href="/">Bibliothèque</a>
+      <a href="/about.html">À propos</a>
+      <a class="admin-link" href="/login.html">Administration</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">BIBLIOTHÈQUE NUMÉRIQUE</p>
+        <h1>DEKAL <span>BOOKS</span></h1>
+        <p class="hero-subtitle">Des ressources utiles. À lire, à consulter, à télécharger.</p>
+      </div>
+      <label class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Rechercher un livre, un auteur..." autocomplete="off">
+      </label>
+    </div>
+  </section>
+
+  <section class="container catalog" aria-label="Catalogue">
+    <div class="catalog-head">
+      <div>
+        <h2>Bibliothèque</h2>
+        <p id="catalogCount">Ressources disponibles</p>
+      </div>
+      <select id="sortSelect" class="select" aria-label="Trier les livres">
+        <option value="recent">Nouveautés</option>
+        <option value="downloads">Populaires</option>
+        <option value="az">A — Z</option>
+      </select>
+    </div>
+
+    <div id="filters" class="filters" aria-label="Catégories">
+      <button class="filter active" data-category="Tous">Tous</button>
+      <button class="filter" data-category="Programmation">Programmation</button>
+      <button class="filter" data-category="Cybersécurité">Cybersécurité</button>
+      <button class="filter" data-category="Business">Business</button>
+      <button class="filter" data-category="Éducation">Éducation</button>
+      <button class="filter" data-category="Technologie">Technologie</button>
+      <button class="filter" data-category="Développement web">Web</button>
+      <button class="filter" data-category="Autres">Autres</button>
+    </div>
+
+    <div id="status" class="status" hidden></div>
+    <div id="loader" class="loader" hidden><span></span> Chargement</div>
+    <div id="bookGrid" class="book-grid"></div>
+    <div id="empty" class="empty" hidden>
+      <div class="empty-icon">⌕</div>
+      <strong>Aucun livre trouvé</strong>
+      <span>Modifiez votre recherche ou choisissez une autre catégorie.</span>
+    </div>
+    <div id="pagination" class="pagination"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <strong>DEKAL BOOKS</strong>
+    <span>© <span id="year"></span></span>
+  </div>
+</footer>
+<script src="/js/app.js"></script>
+</body>
+</html>
