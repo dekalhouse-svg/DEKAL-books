@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.db
+.venv/
+venv/
+.env
+backend/uploads/pdfs/*
+!backend/uploads/pdfs/.gitkeep
+.DS_Store
+.vscode/
+.idea/
+.pytest_cache/
